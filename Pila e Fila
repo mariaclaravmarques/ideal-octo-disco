@@ -1,0 +1,95 @@
+importar  numpy  como  np
+
+       Pilha :
+    def  __init__ ( auto , capacidade ):
+        eu . capacidade  =  capacidade
+        eu . topo  =  - 1
+        eu . valores  =  np . esvaziar ( auto . CAPACIDADE , dtipo = int )
+    
+    def  pilha_vazia ( self ):
+        se  eu . topo  ==  -  1 :
+            retornar  verdadeiro
+        mais :
+            retornar  falso
+
+    def  pilha_cheia ( auto ):
+        se  eu . topo  ==  self . capacidade  -  1 :
+            retornar  verdadeiro
+        mais :
+            retornar  falso
+    
+    def  ver_topo ( self ):
+        se  eu . pilha_vazia ():
+            return  print ( 'A pilha tá vazia' )
+        return  print ( f ' { self . valores [ self . topo ] } tá no topo' )
+    
+    def  empilhar ( self , value ):
+        eu . topo  + =  1
+        eu . valores [ self . topo ] =  valor
+    
+    def  desempilhar ( self ):
+        eu . topo  - =  1
+    
+    def  imprimir ( próprio ):
+        para  c  na  gama ( auto . topográfico , - 1 , - 1 ):
+            imprimir ( f ' { c } - { self . valores [ c ] } ' )
+    
+    def  pesquisar ( próprio , valor ):
+        para  i  no  intervalo ( auto . topo  +  1 ):
+            se  eu . valores [ i ] ==  valor :
+                return  print ( f ' { value } está na posição { i } ' )
+        return  print ( f ' { value } não tá na pilha' )
+
+classe  Fila :
+    def  __init__ ( auto , capacidade ):
+        eu . capacidade  =  capacidade
+        eu . inicio  =  0
+        eu . final  =  - 1
+        eu . qtelementos  =  0
+        eu . valores  =  np . esvaziar ( auto . CAPACIDADE , dtipo = int )
+    
+    def  fila_vazia ( próprio ):
+        se  eu . qtelementos  ==  0 :
+            retornar  verdadeiro
+        mais :
+            retornar  falso
+
+    def  fila_cheia ( próprio ):
+        se  eu . qtelementos  ==  self . capacidade :
+            retornar  verdadeiro
+        mais :
+            retornar  falso
+        
+    def  ver_primeiro ( self ):
+        return  print ( f ' { self . valores [ self . inicio ] } é o primeiro' )
+
+    def  imprimir ( próprio ):
+        se  eu . final  <  self . inicio :
+            para  c  na  faixa ( self . inicio , self . capacidade ):
+                imprimir ( f ' { c } - { self . valores [ c ] } ' )
+            para  c  no  intervalo ( auto . final  +  1 ):
+                imprimir ( f ' { c } - { self . valores [ c ] } ' )
+        mais :
+            para  c  na  faixa ( self . inicio , self . final  +  1 ):
+                imprimir ( f ' { c } - { self . valores [ c ] } ' )
+    
+    def  enfileirar ( self , value ):
+        se  eu . final  ==  self . capacidade  -  1 :
+            eu . final  =  - 1
+        
+        eu . final  + =  1
+        eu . qtelementos  + =  1
+        eu . valores [ self . final ] =  valor
+    
+    def  pesquisar ( próprio , valor ):
+        para  c  no  intervalo ( self . qtelementos ):
+            se  eu . valores [ c ] ==  valor :
+                return  print ( f ' { value } está na posição { c } ' )
+        voltar  imprimir ( f'Não foi encontrado ' )
+
+    def  desenfileirar ( self ):
+        se  eu . inicio  ==  self . capacidade  - 1 :
+            eu . inicio  =  - 1
+
+        eu . inicio  + =  1
+        eu . qtelementos  - =  1
