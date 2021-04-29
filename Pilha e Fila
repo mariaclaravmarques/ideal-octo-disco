@@ -1,0 +1,78 @@
+de  classs  importação  Pilha  como  P
+das  aulas  importe  Fila  como  F
+
+opção  =  entrada ( '[1] Pilha \ n [2] Fila \ n ' )
+
+capacidade  =  int ( entrada ( 'Qual a capacidade? ' ))
+
+if  option  ==  '1' :
+    var  =  P ( capacidade )
+
+    enquanto  opção  ! =  '6' :
+        option  =  input ( '[1] Ver topo / primeiro \ n [2] Imprimir \ n [3] Empilhar \ n [4] Pesquisar \ n [5] Desempilhar \ n [6] Sair \ n ' )
+
+        if  option  ==  '1' :
+            var . ver_topo ()
+        
+         opção  elif ==  '2' :
+            var . imprimir ()
+        
+         opção  elif ==  '3' :
+            se  não  var . pilha_cheia ():
+                valor  =  int ( input ( 'Qual valor deseja empilhar? ' ))
+                var . empilhar ( valor )
+            mais :
+                imprimir ( 'A pilha tá cheia' )
+         opção  elif ==  '4' :
+            se  não  var . pilha_vazia ():
+                value  =  int ( input ( 'Qual valor deseja pesquisar? ' ))
+                var . pesquisar ( valor )
+            mais :
+                print ( 'A pilha tá vazia' )
+         opção  elif ==  '5' :
+            se  não  var . pilha_vazia ():
+                var . desempilhar ()
+            mais :
+                print ( 'A pilha tá vazia' )
+        
+        imprimir ( '=' * 30 )
+
+ opção  elif ==  '2' :
+    var  =  F ( capacidade )
+    
+    enquanto  opção  ! =  '6' :
+        option  =  input ( '[1] Ver primeiro \ n [2] Imprimir fila \ n [3] Enfileirar \ n [4] Pesquisar \ n [5] Desenfileirar \ n [6] Sair \ n ' )
+
+        if  option  ==  '1' :
+            se  não  var . fila_vazia ():
+                var . ver_primeiro ()
+            mais :
+                print ( 'A fila tá vazia' )
+        
+         opção  elif ==  '2' :
+            se  não  var . fila_vazia ():
+                var . imprimir ()
+            mais :
+                print ( 'A fila tá vazia' )
+
+         opção  elif ==  '3' :
+            se  não  var . fila_cheia ():
+                valor  =  int ( input ( 'Qual valor deseja enfileirar? ' ))
+                var . enfileirar ( valor )
+            mais :
+                print ( 'A fila tá cheia' )
+
+         opção  elif ==  '4' :
+            se  não  var . fila_vazia ():
+                value  =  int ( input ( 'Qual valor deseja pesquisar? ' ))
+                var . pesquisar ( valor )
+            mais :
+                print ( 'A fila ta vazia' )
+
+         opção  elif ==  '5' :
+            se  não  var . fila_vazia ():
+                var . desenfileirar ()
+            mais :
+                print ( 'A fila tá vazia' )
+        
+        imprimir ( '='  * 30 )
